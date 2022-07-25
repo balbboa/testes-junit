@@ -134,7 +134,7 @@ public class ServicoVendas {
 	private BigDecimal valorFrete(BigDecimal frete, BigDecimal peso) {
 		// até 2 kg não é cobrado frete
 		if (peso.doubleValue() <= 2) {
-			System.out.println("Não cobrou o frete");
+			System.out.println("Frete grátis");
 		} else if (peso.doubleValue() > 2 && peso.doubleValue() <= 10) {
 			// acima de 2 kg e abaixo de 10 kg é cobrado R$ 2,00 por kg
 			BigDecimal varFrete = new BigDecimal(2.0);
