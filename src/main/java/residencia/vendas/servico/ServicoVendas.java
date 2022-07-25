@@ -137,21 +137,21 @@ public class ServicoVendas {
 			System.out.println("Não cobrou o frete");
 		} else if (peso.doubleValue() > 2 && peso.doubleValue() <= 10) {
 			// acima de 2 kg e abaixo de 10 kg é cobrado R$ 2,00 por kg
-			BigDecimal freteTemporario = new BigDecimal(2.0);
-			freteTemporario = freteTemporario.multiply(peso);
-			frete = frete.add(freteTemporario);
+			BigDecimal varFrete = new BigDecimal(2.0);
+			varFrete = varFrete.multiply(peso);
+			frete = frete.add(varFrete);
 			
 		} else if (peso.doubleValue() > 10 && peso.doubleValue() <= 50) {
 			// acima de 10 kg e abaixo de 50 kg é cobrado R$ 4,00 por kg
-			BigDecimal freteTemporario = new BigDecimal(4.0);
-			freteTemporario = freteTemporario.multiply(peso);
-			frete = frete.add(freteTemporario);
+			BigDecimal varFrete = new BigDecimal(4.0);
+			varFrete = varFrete.multiply(peso);
+			frete = frete.add(varFrete);
 			
 		} else {
 			// e acima de 50 kg é cobrado R$ 7,00 por kg
-			BigDecimal freteTemporario = new BigDecimal(7.0);
-			freteTemporario = freteTemporario.multiply(peso);
-			frete = frete.add(freteTemporario);
+			BigDecimal varFrete = new BigDecimal(7.0);
+			varFrete = varFrete.multiply(peso);
+			frete = frete.add(varFrete);
 		}
 		return frete;
 	}
