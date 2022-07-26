@@ -101,9 +101,7 @@ public class ServicoTestVendas {
     	itens.add(roupaC);
     	
     	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
-    	
-    	System.out.println(valorTotal);
-    	    	    	  	
+    	    	
     	assertEquals(valorTotal,BigDecimal.valueOf(540.00));
     
     }
@@ -119,9 +117,6 @@ public class ServicoTestVendas {
     	
     	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
     	
-    	System.out.println(valorTotal);
-    	    	
-    	  	
     	assertEquals(valorTotal,BigDecimal.valueOf(810.00));
     
     }
@@ -149,9 +144,6 @@ public class ServicoTestVendas {
     	
     	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
     	
-    	System.out.println(valorTotal);
-    	    	
-    	  	
     	assertEquals(valorTotal,BigDecimal.valueOf(2993.00));
     
     }
