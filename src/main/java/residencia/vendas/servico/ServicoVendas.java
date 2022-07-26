@@ -49,8 +49,7 @@ public class ServicoVendas {
 		BigDecimal frete =  BigDecimal.ZERO;
 		BigDecimal acrescimo = BigDecimal.ZERO;
 		BigDecimal desconto = BigDecimal.ZERO;
-		BigDecimal valorFinal = BigDecimal.ZERO;
-		
+			
 		for(Item i : itens) {
 			peso = peso.add(i.peso());
 				
