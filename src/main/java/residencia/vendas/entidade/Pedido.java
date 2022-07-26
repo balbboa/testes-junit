@@ -9,4 +9,5 @@ public record Pedido(
 		List<Item> itens,
 		LocalDate dataPedido,
 		BigDecimal precoFinal
-		) {}
+		) {	
+}
