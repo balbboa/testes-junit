@@ -59,7 +59,7 @@ public class ServicoVendas {
 		if(peso.doubleValue() < 2.0)
 			frete = peso.multiply(BigDecimal.valueOf(0.0));
 			
-		if(peso.doubleValue() > 2.0 && peso.doubleValue() <= 10) 
+		else if(peso.doubleValue() > 2.0 && peso.doubleValue() <= 10) 
 			frete = peso.multiply(BigDecimal.valueOf(2.0));
 		
 		else if(peso.doubleValue() > 10 && peso.doubleValue() <=50) 
