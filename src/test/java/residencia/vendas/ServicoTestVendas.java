@@ -30,30 +30,31 @@ public class ServicoTestVendas {
 	
 	@Test
     public void pesoMaiorQue2() {
-    	ServicoVendas totaldoPedido = new ServicoVendas();
+    	ServicoVendas totalDoPedido = new ServicoVendas();
     	
     	List<Item> itens = new ArrayList<>();
     	
     	Item roupaC = new Item("Roupa","Roupa",BigDecimal.valueOf(200.0),BigDecimal.valueOf(4.0),TipoItem.ROUPAS);
       	itens.add(roupaC);
     	
-       	BigDecimal valorTotal = totaldoPedido.finalizarVenda(usuario, itens);
+      	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
        	           	
-    	assertEquals(BigDecimal.valueOf(208.00),valorTotal);
+    	assertEquals(valorTotal.doubleValue(),208.00);
     
     }
 	
 	@Test
     public void pesoMaiorQue10() {
-    	ServicoVendas totaldoPedido = new ServicoVendas();
+    	ServicoVendas totalDoPedido = new ServicoVendas();
     	
     	List<Item> itens = new ArrayList<>();
     	
     	Item roupaC = new Item("Roupa","Roupa",BigDecimal.valueOf(200.0),BigDecimal.valueOf(15.0),TipoItem.ROUPAS);
       	itens.add(roupaC);
-    	BigDecimal valorTotal = totaldoPedido.finalizarVenda(usuario, itens);
+      	
+      	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
     	
-    	assertEquals(valorTotal,BigDecimal.valueOf(260.0));
+    	assertEquals(valorTotal.doubleValue(),260.0);
     
     }
 	
@@ -69,7 +70,7 @@ public class ServicoTestVendas {
     	
     	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
     	    	
-    	assertEquals(valorTotal,BigDecimal.valueOf(200.0));
+    	assertEquals(valorTotal.doubleValue(),200.0);
     
     }
 	
@@ -85,7 +86,7 @@ public class ServicoTestVendas {
     	
     	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
     	    	    	  	
-    	assertEquals(valorTotal,BigDecimal.valueOf(900.0));
+    	assertEquals(valorTotal.doubleValue(),900.0);
     
     }
 	
@@ -101,8 +102,9 @@ public class ServicoTestVendas {
     	itens.add(roupaC);
     	
     	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
-    	    	
-    	assertEquals(valorTotal,BigDecimal.valueOf(540.00));
+    	
+    	
+    	assertEquals(valorTotal.doubleValue(),810.00);
     
     }
     
@@ -116,8 +118,8 @@ public class ServicoTestVendas {
     	itens.add(roupaC);
     	
     	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
-    	
-    	assertEquals(valorTotal,BigDecimal.valueOf(810.00));
+    	    	  	
+    	assertEquals(valorTotal.doubleValue(),540.00);
     
     }
     
@@ -142,9 +144,9 @@ public class ServicoTestVendas {
     	Item roupaG = new Item("Roupa","Roupa",BigDecimal.valueOf(30.0),BigDecimal.valueOf(7.0),TipoItem.ROUPAS);
     	itens.add(roupaG);
     	
-    	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);
-    	
-    	assertEquals(valorTotal,BigDecimal.valueOf(2993.00));
+    	BigDecimal valorTotal = totalDoPedido.finalizarVenda(usuario, itens);   	   	    	
+    	  	
+    	assertEquals(valorTotal.doubleValue(),2993.00);
     
     }
     
